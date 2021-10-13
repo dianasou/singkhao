@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sing Khao Thai</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome kit code -->
+  <script src="https://kit.fontawesome.com/1a15afc35f.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+  <!-- header section -->
+  <header>
+    <div>
+
+      <div class="navHeader">
+        <img src="img/logo.svg" alt="Sing Khao Logo" class="logo">
+
+        <div class="name">
+          <a href="index.html"><h1>Sing Khao</h1><h4>Thai Cuisine</h4></a>
+        </div>
+      </div>
+
+      <div class="navtoggle" id="myNavtoggle">
+        <a class="nav-link" href="menu.html">Menu</a>
+        <a class="nav-link" href="reservations.html">Reservations</a>
+        <a class="nav-link" href="story.html">Our Story</a>
+        <a class="nav-link" href="order.html" id="highlight">Order Online</a>
+        <a href="javascript:void(0);" class="icon" onclick="menuToggle()"><i class="fas fa-bars"></i></a>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- main section -->
+  <main class="container">
+    <h1 class="title">The Story of Sing Khao</h1>
+
+    <!-- slideshow container -->
+    <div class="slideshow-container">
+      <!-- images -->
+      <div class="mySlides fade">
+        <img src="img/story/buddhacandle.jpg" alt="buddha and candle">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/story/glowingtemple.jpg" alt="glowing temple">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/story/cookingman.jpg" alt="cooking man">
+      </div>
+
+      <div class="mySlides fade">
+        <img src="img/story/ubonwaterfall.jpg" alt="ubon waterfall">
+      </div>
+    </div>
+
+    <br>
+
+    <!-- dots/circles -->
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <p>
+      <b>Authenticity, tradition, and flavor</b> are what we stand by to provide to our customers.
+    </p>
+
+    <p>
+      We are a Thai cuisine restaurant that focuses on northeastern Thai food, also known as Thai Isan.
+      It is part of Thailand that boarders the famous Mekong River in Southeast Asia.
+      Our food is inspired by the traditional recipes we grew up eating, brought to us from our parents that lived near the region.
+    </p>
+
+    <p>
+      We hope to bring an authentic atmosphere to each and every one of you as if you were family.
+      Enjoy the flavors of northeastern Thailand and the essence of its people. &hearts;
+    </p>
+
+    <p>
+      The restaurant was named after my father.
+      Sing translates to lion, and Khao simply translates to food or rice.
+      Naming the restraurant after a parent is a reminder that there is no other love like theirs, but we can try to make food that reminds us of them and how they showed their love through food.
+    </p>
+
+  </main>
+
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
