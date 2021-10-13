@@ -90,9 +90,15 @@ h4 {
 .dish {
   font-weight: bold;
   font-size: 14px;
+  line-height: 1.5em;
 }
 
 .description {
+  line-height: 1.5em;
+}
+
+.info {
+  margin: 15px 0;
   line-height: 1.5em;
 }
 
@@ -333,7 +339,19 @@ a.nav-link:hover {
   grid-gap: 5px;
 }
 
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 5px;
+}
+
 .column {
+  margin: 0;
+  display: inline-block;
+  text-align: left;
+}
+
+.footer-col {
   margin: 0;
   display: block;
   align-items: center;
@@ -431,13 +449,13 @@ footer {
   }
 
   .col-lg-6 {
-    width: 50%;
+    width: 75%;
     display: inline-block;
     text-align: left;
-    margin: 15px 0;
+    margin: 0;
   }
 
-  .column {
+  .footer-col {
     padding-left: 25%;
     text-align: center;
   }
