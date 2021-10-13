@@ -11,6 +11,43 @@ body {
   font-size: 16px;
 }
 
+/* optimize for mobile screens/small less than 600px -- hide nav and use hamburger menu */
+@media screen and (max-width: 600px) {
+  .navHeader {
+    text-align: left;
+    vertical-align: middle;
+    padding: 10px 10px 0;
+    margin: 10px 10px 0;
+  }
+
+  .navtoggle a:not(:last-child) {
+    display: none;
+  }
+
+  .navtoggle a.icon {
+    float: right;
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 20px;
+    padding-right: 0;
+  }
+
+  .navtoggle.responsive a.icon {
+    position: absolute;
+    right: 25px;
+    top: 50px;
+  }
+
+  .navtoggle.responsive a:not(:last-child) {
+    float: none;
+    display: block;
+    text-align: right;
+    padding: 5px;
+  }
+}
+
 .navHeader {
   text-align: center;
   vertical-align: middle;
@@ -79,6 +116,7 @@ p {
 
 #highlight {
   color: gold;
+  background-color: transparent;
 }
 
 a {
@@ -125,6 +163,7 @@ a.nav-link:hover {
 .navtoggle {
   font-family: 'Bebas Neue', sans-serif;
   background-color: black;
+  color: white;
   padding-bottom: 15px;
   text-align: center;
 }
@@ -133,39 +172,12 @@ a.nav-link:hover {
 .navtoggle a {
   display: inline-block;
   color: white;
+  background-color: transparent;
   text-align: center;
   padding: 0;
   text-decoration: none;
   font-size: 24px;
   justify-content: center;
-}
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: black;
-  min-width: 160px;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  z-index: 1;
-  text-align: left;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {
-  background-color: black;
-}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-  margin: 5px 0;
 }
 
 /* Change the color of links on hover */
@@ -183,43 +195,6 @@ a.nav-link:hover {
 /* Hide the link that should open and close the topnav on small screens */
 .navtoggle .icon {
   display: none;
-}
-
-/* optimize for mobile screens/small less than 600px -- hide nav and use hamburger menu */
-@media screen and (max-width: 600px) {
-  .navHeader {
-    text-align: left;
-    vertical-align: middle;
-    padding: 10px 10px 0;
-    margin: 10px 10px 0;
-  }
-
-  .navtoggle a:not(:last-child) {
-    display: none;
-  }
-
-  .navtoggle a.icon {
-    float: right;
-    display: block;
-    position: absolute;
-    top: 50px;
-    right: 25px;
-    font-size: 20px;
-    padding-right: 0;
-  }
-
-  .navtoggle.responsive a.icon {
-    position: absolute;
-    right: 25px;
-    top: 50px;
-  }
-
-  .navtoggle.responsive a:not(:last-child) {
-    float: none;
-    display: block;
-    text-align: right;
-    padding: 5px;
-  }
 }
 
 /* Slideshow container */
@@ -259,6 +234,7 @@ a.nav-link:hover {
 
 .mySlides .btn:hover {
   background-color: gold;
+  color: white;
 }
 
 /* Caption text */
@@ -283,6 +259,7 @@ a.nav-link:hover {
   margin-top: -22px;
   padding: 16px;
   color: white;
+  background-color: transparent;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
@@ -300,6 +277,7 @@ a.nav-link:hover {
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }
 
 /* The dots/bullets/indicators */
@@ -356,14 +334,17 @@ a.nav-link:hover {
 }
 
 .column {
-  text-align: left;
   margin: 0;
+  display: block;
+  align-items: center;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 footer {
   padding: 5px;
   margin: 5px;
-  text-align: left;
 }
 
 .copyright {
@@ -454,6 +435,11 @@ footer {
     display: inline-block;
     text-align: left;
     margin: 15px 0;
+  }
+
+  .column {
+    padding-left: 25%;
+    text-align: center;
   }
 
   .dish {
