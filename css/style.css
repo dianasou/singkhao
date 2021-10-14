@@ -87,6 +87,13 @@ h4 {
   margin: 0;
 }
 
+#name,
+#date,
+#time,
+#submit {
+  padding: 5px;
+}
+
 #numPeople {
   text-align: center;
 }
