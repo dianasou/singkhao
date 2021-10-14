@@ -9,7 +9,6 @@ function menuToggle () {
   }
 }
 
-/*
 // set active class to button when clicked in navbar: https://youtu.be/BI3kNsTruWo
 const currentLocation = location.href;
 const menuItem = document.querySelectorAll('.nav-link');
@@ -20,9 +19,21 @@ for (let i = 0; i < menuLength; i++) {
     menuItem[i].className = 'active';
   }
 }
-*/
 
-// manual Slideshow
+// add/subtract numPeople for Reservations
+function increase() {
+  var userInput = document.getElementById('numPeople');
+  userInput.value++;
+}
+
+function decrease() {
+  var userInput = document.getElementById('numPeople');
+  if (userInput.value > 2) {
+    userInput.value--;
+  }
+}
+
+// manual slideshow
 var slideIndex = 1;
 showSlides(slideIndex);
 

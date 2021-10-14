@@ -48,26 +48,19 @@
     <div class="container">
       <h1 class="title">Reserve Dining</h1>
       <p>Tables can be reserved during regular hours Mon-Fri & starting at noon Sat-Sun, *<i>excluding happy hour 5 pm - 6 pm</i>.</p>
+      <p>Please call us for special events or parties over 20 people! We would be happy to accommodate accordingly.</p>
 
-      <form action="/action_page.php">
+      <form>
         <fieldset>
         <label for="name">Full Name</label><br>
-        <input type="text" id="name" name="name" value="John Doe"><br><br>
-        <!-- make into plus/minus number for ease -->
-        <label for="numpeople">Number in Party</label><br>
-        <select name="numpeople" id="numpeople">
-          <option value=role>2 people</option>
-          <option value=role>3 people</option>
-          <option value=role>4 people</option>
-          <option value=role>5 people</option>
-          <option value=role>6 people</option>
-          <option value=role>7 people</option>
-          <option value=role>8 people</option>
-          <option value=role>9 people</option>
-          <option value=role>10 people</option>
-        </select><br><br>
+        <input type="text" id="name" name="name" value="First Last" onfocus="this.value=''"><br><br>
+        <!-- make into increment for ease -->
+        <label for="numPeople">Number in Party</label><br>
+        <button type="button" id="subtract" onclick="decrease()">-</button>
+        <input type="number" id="numPeople" value="2" min=2 max=20>
+        <button type="button" id="add" onclick="increase()">+</button><br><br>
         <label for="date">Date:</label><br>
-        <input type="text" id="date" name="date" value="mm/dd/year"><br><br>
+        <input type="text" id="date" name="date" value="mm/dd/year" onfocus="this.value=''"><br><br>
         <label for="time">Time</label><br>
         <select name="time" id="time">
           <option value=role>12:00 pm</option>
