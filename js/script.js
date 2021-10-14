@@ -23,7 +23,9 @@ for (let i = 0; i < menuLength; i++) {
 // add/subtract numPeople for Reservations
 function increase() {
   var userInput = document.getElementById('numPeople');
-  userInput.value++;
+  if (userInput.value < 20) {
+    userInput.value++;
+  }
 }
 
 function decrease() {
