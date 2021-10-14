@@ -87,8 +87,14 @@ h4 {
   margin: 0;
 }
 
-/* The container */
 .dish {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+
+/* container for online order menu selection */
+.select-dish {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -103,16 +109,8 @@ h4 {
   line-height: 1.5em;
 }
 
-.submit-order {
-  width: 25%;
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  margin: auto;
-}
-
-/* Hide the browser's default checkbox */
-.dish input {
+/* hide browser's default checkbox */
+.select-dish input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -120,7 +118,7 @@ h4 {
   width: 0;
 }
 
-/* Create a custom checkbox */
+/* create custom checkbox */
 .checkmark {
   position: absolute;
   top: 0;
@@ -130,25 +128,25 @@ h4 {
   background-color: #eee;
 }
 
-/* On mouse-over, add a grey background color */
-.dish:hover input ~ .checkmark {
+/* add a grey background color on hover */
+.select-dish:hover input ~ .checkmark {
   background-color: #ccc;
 }
 
-/* When the checkbox is checked, add a blue background */
-.dish input:checked ~ .checkmark {
+/* when checkbox is checked, add a blue background */
+.select-dish input:checked ~ .checkmark {
   background-color: #db351e;
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
+/* create checkmark/indicator (hidden when not checked) */
 .checkmark::after {
   content: "";
   position: absolute;
   display: none;
 }
 
-/* Style the checkmark/indicator */
-.dish .checkmark::after {
+/* style checkmark/indicator */
+.select-dish .checkmark::after {
   left: 9px;
   top: 5px;
   width: 5px;
@@ -160,9 +158,17 @@ h4 {
   transform: rotate(45deg);
 }
 
-/* Show the checkmark when checked */
-.dish input:checked ~ .checkmark::after {
+/* show checkmark when checked */
+.select-dish input:checked ~ .checkmark::after {
   display: block;
+}
+
+.submit-order {
+  width: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
 }
 
 .description {
@@ -171,7 +177,7 @@ h4 {
 
 .info {
   margin: 15px 0;
-  line-height: 1.5em;
+  line-height: 0.5em;
 }
 
 ul {
@@ -232,7 +238,7 @@ a.nav-link:hover {
   width: 100%;
 }
 
-/* Add a black background color to the top navigation */
+/* add background color to the top navigation */
 .navtoggle {
   font-family: 'Bebas Neue', sans-serif;
   background-color: black;
@@ -241,7 +247,7 @@ a.nav-link:hover {
   text-align: center;
 }
 
-/* Style the links inside the navigation bar */
+/* style links inside the navigation bar */
 .navtoggle a {
   display: inline-block;
   color: white;
@@ -253,40 +259,38 @@ a.nav-link:hover {
   justify-content: center;
 }
 
-/* Change the color of links on hover */
+/* change color of links on hover */
 .navtoggle a:hover {
   background-color: black;
   color: #db351e;
 }
 
-/* Add an active class to highlight the current page */
+/* add active class to highlight the current page */
 .navtoggle a.active {
   background-color: black;
   color: #db351e;
 }
 
-/* Hide the link that should open and close the topnav on small screens */
+/* hide link that should open and close the topnav on small screens */
 .navtoggle .icon {
   display: none;
 }
 
-/* Slideshow container */
+/* slideshow container */
 .slideshow-container {
   max-width: 100%;
   position: relative;
   margin: auto;
 }
 
-/* Hide the images by default */
-.mySlides,
-.mySlides2 {
+/* hide the images by default */
+.mySlides {
   display: none;
 }
 
-.mySlides img,
-.mySlides2 img {
+.mySlides img {
   width: 100%;
-  height: 500px;
+  height: 400px;
   object-fit: cover;
 }
 
@@ -310,19 +314,7 @@ a.nav-link:hover {
   color: white;
 }
 
-/* Caption text */
-.text {
-  color: white;
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: 24px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  text-align: center;
-}
-
-/* Next & previous buttons */
+/* next & previous buttons */
 .prev,
 .next {
   cursor: pointer;
@@ -340,20 +332,20 @@ a.nav-link:hover {
   user-select: none;
 }
 
-/* Position the "next button" to the right */
+/* position "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
+/* on hover, add a black background color with a little bit see-through */
 .prev:hover,
 .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
   color: white;
 }
 
-/* The dots/bullets/indicators */
+/* dots/bullets/indicators for slides */
 .dot {
   cursor: pointer;
   height: 15px;
@@ -370,7 +362,7 @@ a.nav-link:hover {
   background-color: #717171;
 }
 
-/* Fading animation */
+/* fading animation for slides */
 .fade {
   -webkit-animation-name: fade;
   -webkit-animation-duration: 1.5s;
@@ -400,10 +392,11 @@ a.nav-link:hover {
   background-color: transparent;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, auto);
-  grid-gap: 5px;
+.hours {
+  color: black;
+  background-color: transparent;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .grid-3 {
@@ -430,7 +423,7 @@ a.nav-link:hover {
 footer {
   padding: 5px;
   margin: 5px;
-  font-size: 14px;
+  font-size: 11px;
 }
 
 .copyright {
@@ -440,7 +433,7 @@ footer {
 }
 
 /* medium screen size */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 640px) {
   nav {
     padding-bottom: 10px;
   }
@@ -466,17 +459,45 @@ footer {
     padding: 100px;
   }
 
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 5px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 5px;
+  }
+
   .col-md-6 {
-    width: 50%;
+    width: 90%;
+  }
+
+  .mySlides img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
   }
 
   .dish {
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
+  }
+
+  .footer-col {
+    padding-left: 15%;
+    margin: 0;
+    display: block;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   footer {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 
@@ -500,7 +521,7 @@ footer {
     display: none;
   }
 
-  /* Hide the images by default */
+  /* hide images by default */
   .mySlides,
   .mySlides2 {
     display: none;
@@ -520,21 +541,45 @@ footer {
     padding: 100px;
   }
 
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 5px;
+  }
+
+  .grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 5px;
+  }
+
   .col-lg-6 {
-    width: 75%;
+    width: 90%;
     display: inline-block;
     text-align: left;
     margin: 0;
   }
 
-  .dish {
+  .mySlides img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .dish,
+  .select-dish {
     font-weight: bold;
     font-size: 18px;
   }
 
   .footer-col {
-    padding-left: 15%;
+    padding-left: 5%;
+    margin: 0;
+    display: block;
+    align-items: center;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   footer {
