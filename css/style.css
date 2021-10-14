@@ -276,6 +276,12 @@ a.nav-link:hover {
   display: none;
 }
 
+/* reservation form styling */
+fieldset {
+  padding: 20px;
+  line-height: 2em;
+}
+
 /* slideshow container */
 .slideshow-container {
   max-width: 100%;
