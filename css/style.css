@@ -282,6 +282,7 @@ a.nav-link:hover {
   background-color: black;
   color: #db351e;
   text-decoration: underline;
+  margin: 0 15px;
 }
 
 /* hide link that should open and close the topnav on small screens */
