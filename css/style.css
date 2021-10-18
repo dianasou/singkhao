@@ -1,12 +1,12 @@
 /*
 Primary Color: #db351e (red)
 Secondary Color: gold
-Background Color: black/white
-Font Color: white/black
+Background Color: #111 (almost black)/white
+Font Color: white/#111
 */
 body {
   font-family: 'Quicksand', sans-serif;
-  background-color: black;
+  background-color: #111;
   color: white;
   font-size: 16px;
 }
@@ -273,13 +273,13 @@ a.nav-link:hover {
 
 /* change color of links on hover */
 .navtoggle a:hover {
-  background-color: black;
+  background-color: #111;
   color: #db351e;
 }
 
 /* add active class to highlight the current page */
 .navtoggle a.active {
-  background-color: black;
+  background-color: #111;
   color: #db351e;
   text-decoration: underline;
   margin: 0 15px;
@@ -326,7 +326,7 @@ fieldset {
   left: 50%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  background-color: black;
+  background-color: #111;
   color: white;
   font-size: 16px;
   padding: 12px 24px;
