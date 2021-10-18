@@ -253,7 +253,7 @@ a.nav-link:hover {
 /* add background color to the top navigation */
 .navtoggle {
   font-family: 'Bebas Neue', sans-serif;
-  background-color: black;
+  background-color: #111;
   color: white;
   padding-bottom: 15px;
   text-align: center;
