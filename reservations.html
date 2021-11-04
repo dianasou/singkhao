@@ -54,14 +54,14 @@
       <form>
         <fieldset>
         <label for="name">Full Name</label><br>
-        <input type="text" id="name" name="name" value="First Last" onfocus="this.value=''"><br><br>
+        <input type="text" id="name" name="name" placeholder="First Last" onfocus="this.value=''"><br><br>
         <!-- make into increment for ease -->
         <label for="numPeople">Number in Party</label><br>
         <button type="button" id="subtract" onclick="decrease()">-</button>
-        <input type="number" id="numPeople" value="2" min=2 max=20>
+        <input type="number" id="numPeople" placeholder="2" min=2 max=20>
         <button type="button" id="add" onclick="increase()">+</button><br><br>
         <label for="date">Date:</label><br>
-        <input type="text" id="date" name="date" value="mm/dd/year" onfocus="this.value=''"><br><br>
+        <input type="text" id="date" name="date" placeholder="mm/dd/year" onfocus="this.value=''"><br><br>
         <label for="time">Time</label><br>
         <select name="time" id="time">
           <option value=role>12:00 pm</option>

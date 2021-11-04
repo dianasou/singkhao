@@ -64,23 +64,3 @@ function showSlides(n) {
   }
   slides[slideIndex - 1].style.display = 'block';
 }
-
-/*
-// automatic slideshow
-var slideIndex2 = 0;
-carousel();
-
-function carousel() {
-  var z;
-  var slides2 = document.getElementsByClassName('mySlides2');
-  for (z = 0; z < slides2.length; z++) {
-    slides2[z].style.display = 'none';
-  }
-  slideIndex2++;
-  if (slideIndex2 > slides2.length) {
-    slideIndex2 = 1;
-  }
-  slides2[slideIndex2 - 1].style.display = 'block';
-  setTimeout(carousel, 4000); // Change image every 4 seconds
-}
-*/
